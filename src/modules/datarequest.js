@@ -8,9 +8,8 @@ const DataTransfere = (() => {
       const temp = document.querySelector('p');
       const response = await fetch(url);
       const data = await response.json();
-      // console.log(data)
       const [ temperature, country ] = [ data.main.temp, data.sys.country ];
-      temp.innerHTML = `${temperature} &deg; ,${country}`;
+      temp.innerHTML = `${Math.round(temperature)} &deg; ,${country}`;
       temp.classList = 'text-success';
     }
     catch {
