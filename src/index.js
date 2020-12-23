@@ -9,7 +9,5 @@ submitForm.addEventListener('click', e => {
   if(formInput) {
      DataTransfere.getWeatherData(formInput);
   }
-
-
 });
 
