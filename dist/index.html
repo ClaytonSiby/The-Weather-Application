@@ -4,31 +4,61 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
-		<link rel="stylesheet" href="./assets/stylesheets/style.css" />
+		<link rel="stylesheet" href="stylesheets/style.css" />
 	</head>
 	<body>
-		<div class="container">
-			<div class="data-container">
-				<h1>
-					<span id="city">Sandton</span>,
-					<small id="country-name" class="font-italic">ZA</small>
-				</h1>
-				<p>
-					<span id="temperature" class="font-weight-bold">30</span> &deg; <span id="celscius">C</span> |
-					<span id="forenheit">&deg;F</span>
-				</p>
+		<div class="container main-data justify-content-center my-auto">
+			<div class="row country-info mb-2">
+				<div class="col-6">
+					<h1>
+						<span id="city">Sandton</span>,
+						<small id="country-name" class="font-italic">ZA</small>
+					</h1>
+					<p>
+						<span id="temperature" class="font-weight-bold">30</span> &deg; <span id="celscius">C</span> |
+						<span id="forenheit">&deg;F</span>
+					</p>
+					<ul>
+						<li class="list-unstyled">
+							Humidity: <span id="humidity" class="font-weight-bold">30</span> %
+						</li>
+						<li class="list-unstyled">
+							Wind: <span id="windspeed" class="font-weight-bold">11</span> km/hr
+						</li>
+					</ul>
+				</div>
+				<div class="col-6 mt-3 mx-0">
+					<form action="" name="search-form">
+						<div class="form-group">
+							<input
+								type="text"
+								class="form-control"
+								id="search"
+								placeholder="Search City name"
+								required
+							/>
+						</div>
+						<div class="form-group">
+							<button class="btn btn-success btn-sm" id="view-data">View Weather Info</button>
+						</div>
+					</form>
+				</div>
+				<div class="col-12 temperature-level centered-div">
+					<p class="high-low-temperature">
+						<span id="high-temp"> High ~ 30 &deg;</span> |
+						<span id="low-temp"> Low ~ 27 &deg;</span>
+					</p>
+				</div>
+				<p class="text-info"></p>
 			</div>
-			<form action="" name="search-form">
-				<div class="form-group">
-					<input type="text" class="form-control" id="search" placeholder="Search City name" required />
-				</div>
-				<div class="form-group">
-					<button class="btn btn-success btn-sm" id="view-data">View Weather Info</button>
-				</div>
-			</form>
 		</div>
+		<!-- <main>
+			<div class="container">
+				<div class="row form-container my-3">
 
-		<p class="text-info"></p>
+				</div>
+			</div>
+		</main> -->
 		<script src="./main.js"></script>
 	</body>
 </html>

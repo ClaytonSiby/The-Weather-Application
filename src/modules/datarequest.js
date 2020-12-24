@@ -22,7 +22,7 @@ const DataTransfere = (() => {
     }
     catch {
       const temp = document.querySelector('p');
-      temp.textContent = 'Server Error please enter a valid City Name!';
+      temp.textContent = 'Server Error!';
       temp.classList = 'text-danger';
     }
   };
