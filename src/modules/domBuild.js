@@ -31,19 +31,19 @@ const DomBuild = (() => {
       data.main.temp_min,
     ];
 
-    const sunnyWeather = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../dist/images/sunny-weather.jpeg") center center';
-    const coldWeather = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../dist/images/weather-bg.jpeg") center center';
+    // const sunnyWeather = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../dist/images/sunny-weather.jpeg") center center';
+    // const coldWeather = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../dist/images/weather-bg.jpeg") center center';
 
 
-    if(TempCalculation.tempInteger(temperature) > 20) {
-      document.body.style.background = sunnyWeather;
-      document.body.style.backgroundRepeat = 'no-repeat';
-      document.body.style.backgroundSize = 'cover';
-    } else {
-      document.body.style.background = coldWeather;
-      document.body.style.backgroundRepeat = 'no-repeat';
-      document.body.style.backgroundSize = 'cover';
-    }
+    // if(TempCalculation.tempInteger(temperature) > 20) {
+    //   document.body.style.background = sunnyWeather;
+    //   document.body.style.backgroundRepeat = 'no-repeat';
+    //   document.body.style.backgroundSize = 'cover';
+    // } else {
+    //   document.body.style.background = coldWeather;
+    //   document.body.style.backgroundRepeat = 'no-repeat';
+    //   document.body.style.backgroundSize = 'cover';
+    // }
 
     theCity.textContent = `${city}, `;
     countryName.textContent = `${country}`;
