@@ -8,7 +8,7 @@ The Weather app is a simple application that uses the [Open Weather Map](https:/
 
 ## Live Link
 
-[Live demo](https://wonderful-kalam-c56d79.netlify.app/)
+[Live demo](https://the-sib-weather.netlify.app/)
 
 
 ## Technologies used:
