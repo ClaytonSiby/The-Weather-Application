@@ -5,8 +5,7 @@
   "private": "true",
   "scripts": {
     "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open"
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -39,6 +38,7 @@
   "dependencies": {
     "bootstrap": "^4.5.3",
     "jquery": "^3.5.1",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "web-dev-server": "^3.0.22"
   }
 }

@@ -31,10 +31,13 @@ const DomBuild = (() => {
       data.main.temp_min,
     ];
 
-    theCity.textContent = `${city}`;
+    theCity.textContent = `${city}, `;
     countryName.textContent = `${country}`;
     humid.textContent = `${humidity}`;
     speed.textContent = `${TempCalculation.tempInteger(windspeed)}`;
+    theTemperature.innerHTML = `${TempCalculation.tempInteger(temperature)}&deg;C`;
+    highTemp.innerHTML = `${TempCalculation.tempInteger(highTemperature)}&deg;C`;
+    lowTemp.innerHTML = `${TempCalculation.tempInteger(lowTemperature)}&deg;C`;
 
     toggleTemp.addEventListener('change', () => {
       if (toggleTemp.checked) {
@@ -42,27 +45,11 @@ const DomBuild = (() => {
         highTemp.innerHTML = `${TempCalculation.toFahrenheit(highTemperature)}&deg;F`;
         lowTemp.innerHTML = `${TempCalculation.toFahrenheit(lowTemperature)}&deg;F`;
       } else {
-        theTemperature.innerHTML = `${TempCalculation.tempInteger(
-          temperature,
-        )}&deg;C`;
-        highTemp.innerHTML = `${TempCalculation.tempInteger(
-          highTemperature,
-        )}&deg;C`;
-        lowTemp.innerHTML = `${TempCalculation.tempInteger(
-          lowTemperature,
-        )}&deg;C`;
+        theTemperature.innerHTML = `${TempCalculation.tempInteger(temperature)}&deg;C`;
+        highTemp.innerHTML = `${TempCalculation.tempInteger(highTemperature)}&deg;C`;
+        lowTemp.innerHTML = `${TempCalculation.tempInteger(lowTemperature)}&deg;C`;
       }
     });
-
-    // if (toggleTemp) {
-    //   theTemperature.innerHTML = `${TempCalculation.tempInteger(temperature)}&deg;C`;
-    //   highTemp.innerHTML = `${TempCalculation.tempInteger(highTemperature)}&deg;C`;
-    //   lowTemp.innerHTML = `${TempCalculation.tempInteger(lowTemperature)}&deg;C`;
-    // } else {
-    //   theTemperature.innerHTML = `${TempCalculation.toFahrenheit(temperature)}&deg;F`;
-    //   highTemp.innerHTML = `${TempCalculation.toFahrenheit(highTemperature)}&deg;F`;
-    //   lowTemp.innerHTML = `${TempCalculation.toFahrenheit(lowTemperature)}&deg;F`;
-    // }
   };
 
   return { renderDom };
