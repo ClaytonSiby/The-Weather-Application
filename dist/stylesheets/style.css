@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: #fff !important;
+  height: 100vh;
+}
+
+.row {
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-data {
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.country-info {
+  max-width: 900px;
+  margin: auto;
+}
+
+.form-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+form {
+  max-width: 50%;
+}
+
+.high-low-temperature span {
+  font-size: 1.4rem;
+}
+
+#humidity, #windspeed {
+  color: palevioletred;
+}
+
+#temperature {
+  font-size: 1.4rem;
+}
