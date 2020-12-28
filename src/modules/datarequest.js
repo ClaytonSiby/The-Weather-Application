@@ -12,6 +12,8 @@ const DataTransfere = (() => {
       const err = document.querySelector('#error');
       err.textContent = 'Server Error, please try a valid city name!';
       err.classList = 'text-danger';
+
+      return err;
     }
   };
 

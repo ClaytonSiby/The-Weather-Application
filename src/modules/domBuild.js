@@ -1,17 +1,17 @@
-import DataTransfere from './datarequest'
-import TempCalculation from './tempCalc'
+import DataTransfere from './datarequest';
+import TempCalculation from './tempCalc';
 
 const DomBuild = (() => {
   const renderDom = async cityValue => {
-    const toggleTemp = document.querySelector('[toggle-temp]')
-    const countryName = document.getElementById('country-name')
-    const theTemperature = document.getElementById('temperature')
-    const theCity = document.getElementById('city')
-    const humid = document.querySelector('#humidity')
-    const speed = document.getElementById('windspeed')
-    const highTemp = document.getElementById('high-temp')
-    const lowTemp = document.getElementById('low-temp')
-    const data = await DataTransfere.getWeatherData(cityValue)
+    const toggleTemp = document.querySelector('[toggle-temp]');
+    const countryName = document.getElementById('country-name');
+    const theTemperature = document.getElementById('temperature');
+    const theCity = document.getElementById('city');
+    const humid = document.querySelector('#humidity');
+    const speed = document.getElementById('windspeed');
+    const highTemp = document.getElementById('high-temp');
+    const lowTemp = document.getElementById('low-temp');
+    const data = await DataTransfere.getWeatherData(cityValue);
 
     const [
       city,
@@ -20,7 +20,7 @@ const DomBuild = (() => {
       humidity,
       windspeed,
       highTemperature,
-      lowTemperature
+      lowTemperature,
     ] = [
       data.name,
       data.main.temp,
@@ -28,31 +28,31 @@ const DomBuild = (() => {
       data.main.humidity,
       data.wind.speed,
       data.main.temp_max,
-      data.main.temp_min
-    ]
+      data.main.temp_min,
+    ];
 
-    theCity.textContent = `${city}`
-    countryName.textContent = `${country}`
-    humid.textContent = `${humidity}`
-    speed.textContent = `${TempCalculation.tempInteger(windspeed)}`
+    theCity.textContent = `${city}`;
+    countryName.textContent = `${country}`;
+    humid.textContent = `${humidity}`;
+    speed.textContent = `${TempCalculation.tempInteger(windspeed)}`;
 
     toggleTemp.addEventListener('change', () => {
       if (toggleTemp.checked) {
-          theTemperature.innerHTML = `${TempCalculation.toFahrenheit(temperature)}&deg;F`;
-          highTemp.innerHTML = `${TempCalculation.toFahrenheit(highTemperature)}&deg;F`;
-          lowTemp.innerHTML = `${TempCalculation.toFahrenheit(lowTemperature)}&deg;F`;
+        theTemperature.innerHTML = `${TempCalculation.toFahrenheit(temperature)}&deg;F`;
+        highTemp.innerHTML = `${TempCalculation.toFahrenheit(highTemperature)}&deg;F`;
+        lowTemp.innerHTML = `${TempCalculation.toFahrenheit(lowTemperature)}&deg;F`;
       } else {
         theTemperature.innerHTML = `${TempCalculation.tempInteger(
-          temperature
-        )}&deg;C`
+          temperature,
+        )}&deg;C`;
         highTemp.innerHTML = `${TempCalculation.tempInteger(
-          highTemperature
-        )}&deg;C`
+          highTemperature,
+        )}&deg;C`;
         lowTemp.innerHTML = `${TempCalculation.tempInteger(
-          lowTemperature
-        )}&deg;C`
+          lowTemperature,
+        )}&deg;C`;
       }
-    })
+    });
 
     // if (toggleTemp) {
     //   theTemperature.innerHTML = `${TempCalculation.tempInteger(temperature)}&deg;C`;
@@ -63,9 +63,9 @@ const DomBuild = (() => {
     //   highTemp.innerHTML = `${TempCalculation.toFahrenheit(highTemperature)}&deg;F`;
     //   lowTemp.innerHTML = `${TempCalculation.toFahrenheit(lowTemperature)}&deg;F`;
     // }
-  }
+  };
 
-  return { renderDom }
-})()
+  return { renderDom };
+})();
 
-export default DomBuild
+export default DomBuild;
