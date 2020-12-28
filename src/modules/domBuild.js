@@ -35,7 +35,7 @@ const DomBuild = (() => {
     const coldWeather = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../dist/images/weather-bg.jpeg") center center';
 
 
-    if (TempCalculation.tempInteger(temperature) > 20) {
+    if(TempCalculation.tempInteger(temperature) > 20) {
       document.body.style.background = sunnyWeather;
       document.body.style.backgroundRepeat = 'no-repeat';
       document.body.style.backgroundSize = 'cover';
