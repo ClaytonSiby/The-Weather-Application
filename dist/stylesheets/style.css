@@ -48,3 +48,7 @@ form {
 #humidity, #windspeed {
   color: palevioletred;
 }
+
+#temperature {
+  font-size: 1.4rem;
+}

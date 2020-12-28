@@ -3,8 +3,8 @@ const TempCalculation = (() => {
 
   const toFahrenheit = (temp) => {
     temp = parseFloat(temp);
-    temp = tempInteger((temp = temp * 1.8 + 32));
-    return temp;
+    const newtemp = tempInteger((temp = temp * 1.8 + 32));
+    return newtemp;
   };
 
   return { tempInteger, toFahrenheit };
